@@ -1,0 +1,66 @@
+###
+GET http://localhost:4000/
+
+###
+POST http://localhost:4000/register
+Content-Type: application/json
+
+{
+    "nombre": "Pau",
+    "apellidos": "Callejas Tovar",
+    "email": "a18paucaltov@inspedralbes.cat",
+    "password": "123456"
+}
+
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+# Authorization: Min eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDliYWZkMTIwOGUxNTRiZDRjYjQ4YTMiLCJpYXQiOjE2MjA5NjYzMzJ9.RzxEiClkEJoiPP7Zt4OmM8eMqVSu80ce9ep00Ofn5GU
+
+{
+    "email": "rafa@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:4000/api/wallets/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGEyNDM0YTBkM2E4MjA4YTgzOWQ5ODEiLCJpYXQiOjE2MjE0MTIyNTV9.bFPmjRWzRuQMhHB8u3rptd8a2uuKETqTmjhpjTBUOo8
+Authorization: Min eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDliYWZkMTIwOGUxNTRiZDRjYjQ4YTMiLCJpYXQiOjE2MjA5NjYzMzJ9.RzxEiClkEJoiPP7Zt4OmM8eMqVSu80ce9ep00Ofn5GU
+
+###
+GET http://localhost:4000/api/wallets
+
+###
+POST http://localhost:4000/api/wallets
+Content-Type: application/json
+
+{
+    "nombre": "Cartera Rafa",
+    "moneda": "Dogecoin",
+    "direccion": "Calle Falsa",
+    "saldo": "50.5",
+    "valor_inicial": "10",
+    "valor_actual": "10",
+    "usuario" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGEyNDM0YTBkM2E4MjA4YTgzOWQ5ODEiLCJpYXQiOjE2MjEzMjA2MTF9.swz8Voo2wXqQxffc7qH9_CSknpAHYUX08QSsjVOc9fk"
+}
+
+
+###
+GET https://api.coingecko.com/api/v3/coins/list
+
+
+###
+GET http://localhost:4000/api/movimientos
+
+###
+POST http://localhost:4000/api/movimientos
+Content-Type: application/json
+
+{
+    "nombre_moneda_original": "BTN",
+    "valor_moneda_original": "50",
+    "cantidad_moneda_original": "2",
+    "nombre_moneda_nueva": "ETH",
+    "valor_moneda_nueva": "70",
+    "cantidad_moneda_nueva": "17",
+    "fecha_operacion": "12/05/2021"
+}
